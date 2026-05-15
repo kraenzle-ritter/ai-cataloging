@@ -1,0 +1,36 @@
+{
+    "name": "kraenzle-ritter/ai-cataloging",
+    "description": "Provider-agnostic core for AI-assisted archival cataloging. Profile loader, schema builder, agent builder, telemetry, multimodal strategies, output mapper into the anton-import-format wire shape. Consumed by Anton and agate.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andreas Kränzle",
+            "email": "kraenzle@k-r.ch"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "kraenzle-ritter/anton-import-format": "^0.2.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0 || ^12.0",
+        "phpstan/phpstan": "^1.12 || ^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "KraenzleRitter\\AiCataloging\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KraenzleRitter\\AiCataloging\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "phpstan": "phpstan analyse src tests --level=8 --no-progress"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
