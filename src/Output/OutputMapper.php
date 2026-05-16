@@ -68,6 +68,31 @@ final class OutputMapper
             ];
         }
 
+        // The schema requires `type` and `uuid` per entry, but LLMs
+        // often produce free-form JSON without those wire-format
+        // hints. Backfill the deterministic-enough defaults so a
+        // perfectly good content payload doesn't get rejected over
+        // missing envelope fields. Operator validates the content,
+        // not the protocol scaffolding.
+        if (! isset($decoded['type'])) {
+            $decoded['type'] = 'record';
+        }
+        if (! isset($decoded['uuid'])) {
+            // Use a v4-style uuid generated from random bytes; we
+            // depend only on PHP core so the package stays Laravel-free.
+            $bytes = random_bytes(16);
+            $bytes[6] = chr((ord($bytes[6]) & 0x0F) | 0x40);
+            $bytes[8] = chr((ord($bytes[8]) & 0x3F) | 0x80);
+            $hex = bin2hex($bytes);
+            $decoded['uuid'] = sprintf('%s-%s-%s-%s-%s',
+                substr($hex, 0, 8),
+                substr($hex, 8, 4),
+                substr($hex, 12, 4),
+                substr($hex, 16, 4),
+                substr($hex, 20, 12),
+            );
+        }
+
         // Wrap as v0.2 single-entry document so the existing validator
         // can check it. The wrapper fields are package-mandated; the
         // entry itself is what the consumer will hand to the resolver
