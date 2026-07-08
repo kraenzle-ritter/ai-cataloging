@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": ">=8.2",
-        "kraenzle-ritter/anton-import-format": "^0.2.1",
+        "kraenzle-ritter/anton-import-format": "^0.2.1 || ^0.3",
         "laravel/ai": "^0.6"
     },
     "require-dev": {
