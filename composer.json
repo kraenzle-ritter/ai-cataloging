@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": ">=8.2",
+        "php": ">=8.3",
         "kraenzle-ritter/anton-import-format": ">=0.2.1 <1.0",
         "laravel/ai": "^0.6"
     },

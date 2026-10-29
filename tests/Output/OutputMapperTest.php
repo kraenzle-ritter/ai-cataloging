@@ -43,6 +43,7 @@ final class OutputMapperTest extends TestCase
 
         $result = $this->mapper->toRecordEntry($raw);
         $this->assertSame([], $result['errors']);
+        $this->assertNotNull($result['entry']);
         $this->assertSame('Mit Fence', $result['entry']['title']['de']);
     }
 

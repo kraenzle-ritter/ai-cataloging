@@ -1,7 +1,8 @@
 # kraenzle-ritter/ai-cataloging
 
+[![CI](https://github.com/kraenzle-ritter/ai-cataloging/actions/workflows/ci.yml/badge.svg)](https://github.com/kraenzle-ritter/ai-cataloging/actions/workflows/ci.yml)
 [![License](https://img.shields.io/github/license/kraenzle-ritter/ai-cataloging)](LICENSE)
-[![PHP Version](https://img.shields.io/badge/PHP-8.2%2B-blue)](https://www.php.net/)
+[![PHP Version](https://img.shields.io/badge/PHP-8.3%2B-blue)](https://www.php.net/)
 
 Provider-agnostic core for AI-assisted archival cataloging.
 
