@@ -1,5 +1,8 @@
 # kraenzle-ritter/ai-cataloging
 
+[![License](https://img.shields.io/github/license/kraenzle-ritter/ai-cataloging)](LICENSE)
+[![PHP Version](https://img.shields.io/badge/PHP-8.2%2B-blue)](https://www.php.net/)
+
 Provider-agnostic core for AI-assisted archival cataloging.
 
 Consumed by [Anton](https://github.com/kraenzle-ritter/anton) (archive
