@@ -1,5 +1,12 @@
 # kraenzle-ritter/ai-cataloging
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="art/rabe-dark.png">
+    <img src="art/rabe.png" alt="A raven, drawn in the style of a wood engraving" width="280">
+  </picture>
+</p>
+
 [![CI](https://github.com/kraenzle-ritter/ai-cataloging/actions/workflows/ci.yml/badge.svg)](https://github.com/kraenzle-ritter/ai-cataloging/actions/workflows/ci.yml)
 [![License](https://img.shields.io/github/license/kraenzle-ritter/ai-cataloging)](LICENSE)
 [![PHP Version](https://img.shields.io/badge/PHP-8.3%2B-blue)](https://www.php.net/)
